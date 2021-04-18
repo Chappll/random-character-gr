@@ -16,7 +16,7 @@ function App() {
 
   function randomInteger(min, max) {
     const num = Math.floor(Math.random() * (max - min + 1)) + min;
-    if (num == randChar) {
+    if (num === randChar) {
       setAgain(again + 1)
     }
     else{
@@ -25,23 +25,17 @@ function App() {
     return num
   }
 
-  function showText() {
-    if (again > 0) {
-      return(characters[randChar].name + ' ' + again)
-    }
-    return(characters[randChar].name) 
-  }
 
   return (
     <div className="App">
-      <img src={gunfire} height={200} width={400}></img>
+      <img src={gunfire} alt="logo" height={200} width={400}></img>
       <div class="flex-container" style={{flexDirection:'column', justifyContent:'center'}}> 
           <header style={{color:'white'}}>{characters[randChar].name + ' ' + (again>1?('x' + again):'')}</header>
-          <img src={characters[randChar].picture} height={200} width={200}></img>
+          <img src={characters[randChar].picture} alt={characters[randChar].name} height={200} width={200}></img>
           <div>
             <button className="button" onClick={()=> setRandChar(randomInteger(0,3))}> Randomise Character</button>
           </div>   
-          <img src={backB} height={100}></img>
+          <img src={backB} alt="" height={100}></img>
       </div>
     </div>
   );
