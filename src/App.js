@@ -10,7 +10,7 @@ import backB from './heropics/bgBlack.PNG'
 import React, { useState } from 'react';
 
 function App() {
-  const[characters,setCharacters] = useState([{name: 'Crown Prince', picture: cat}, {name: 'Ao Bai', picture: dog}, {name: 'Qing Yan', picture: bird}, {name: 'Lei Luo', picture: tiger}])
+  const[characters] = useState([{name: 'Crown Prince', picture: cat}, {name: 'Ao Bai', picture: dog}, {name: 'Qing Yan', picture: bird}, {name: 'Lei Luo', picture: tiger}])
   const[randChar, setRandChar] = useState(Math.floor(Math.random() * (3 - 0 + 1)) + 0)
   const[again, setAgain] = useState(1)
 
