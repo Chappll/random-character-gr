@@ -35,7 +35,7 @@ function App() {
           <div>
             <button className="button" onClick={()=> setRandChar(randomInteger(0,3))}> Randomise Character</button>
           </div>   
-          <img src={backB} alt="" height='100%' width='100%' style={{zIndex:-5}}></img>
+          
       </div>
     </div>
   );
