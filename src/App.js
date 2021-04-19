@@ -6,7 +6,6 @@ import cat from './heropics/CatGunfire.PNG'
 import bird from './heropics/BirdGunfire.PNG'
 import tiger from './heropics/TigerGunfire.PNG'
 import gunfire from './heropics/GunfireLogo.PNG'
-import backB from './heropics/bgBlack.PNG'
 import React, { useState } from 'react';
 
 function App() {
