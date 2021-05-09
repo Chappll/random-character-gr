@@ -26,15 +26,17 @@ function App() {
 
 
   return (
-    <div className="App">
-      <img src={gunfire} alt="logo" height={200} width={400}></img>
-      <div class="flex-container" style={{flexDirection:'column', justifyContent:'center'}}> 
-          <header style={{color:'white'}}>{characters[randChar].name + ' ' + (again>1?('x' + again):'')}</header>
-          <img src={characters[randChar].picture} alt={characters[randChar].name} height={200} width={200}></img>
-          <div>
-            <button className="button" onClick={()=> setRandChar(randomInteger(0,3))}> Randomise Character</button>
-          </div>   
-          
+    <div >
+      <div className="App" >
+        <img src={gunfire} alt="logo" height={600} width={1200}></img>
+        <div class="flex-container" style={{flexDirection:'column', justifyContent:'center'}}> 
+            <header style={{color:'white', fontSize:'40px'}}>{characters[randChar].name + ' ' + (again>1?('x' + again):'')}</header>
+            <img src={characters[randChar].picture} alt={characters[randChar].name} height={500} width={500}></img>
+            <div>
+              <button className="button" onClick={()=> setRandChar(randomInteger(0,3))}> Randomise Character</button>
+            </div>   
+            
+        </div>
       </div>
     </div>
   );
