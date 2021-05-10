@@ -6,7 +6,7 @@ import cat from './heropics/CatGunfire.PNG'
 import bird from './heropics/BirdGunfire.PNG'
 import tiger from './heropics/TigerGunfire.PNG'
 import gunfire from './heropics/GunfireLogo.PNG'
-import Loader from "react-loader-spinner";
+//import Loader from "react-loader-spinner";
 import React, { useState } from 'react';
 
 function App() {
@@ -38,9 +38,11 @@ function App() {
       <div className="App" >
         <img src={gunfire} alt="logo" height={600} width={1200}></img>
         <div class="flex-container" style={{flexDirection:'column', justifyContent:'center'}}> 
-            <header style={{color:'white', fontSize:'40px'}}>{characters[randChar].name + ' ' + (again>1?('x' + again):'')}</header>
-            <Loader z-index="-1" type="Puff" color="#00BFFF" height={100} width={100} visible={loading} />
-            <img onLoad={handleImageLoaded} src={characters[randChar].picture} alt={characters[randChar].name} height={500} width={500}></img>       
+            {loading? <header style={{color:'white', fontSize:'40px'}}>Loading...</header>: 
+             <header style={{color:'white', fontSize:'40px'}}>{characters[randChar].name + ' ' + (again>1?('x' + again):'')}</header>}
+            {//<Loader type="Puff" color="#00BFFF" height={100} width={100} visible={loading} />
+            }
+            <img onLoad={handleImageLoaded} style={{zIndex:"-1"}} src={characters[randChar].picture} alt={characters[randChar].name} height={500} width={500}></img>       
             <div>
               <button className="button" onClick={()=> setRandChar(randomInteger(0,3))}> Randomise Character</button>
             </div>            
