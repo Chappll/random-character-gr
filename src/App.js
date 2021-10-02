@@ -5,12 +5,13 @@ import dog from './heropics/DogGunfire.PNG'
 import cat from './heropics/CatGunfire.PNG'
 import bird from './heropics/BirdGunfire.PNG'
 import tiger from './heropics/TigerGunfire.PNG'
+import bunny from './heropics/TaoGunfire.PNG'
 import gunfire from './heropics/GunfireLogo.PNG'
 //import Loader from "react-loader-spinner";
 import React, { useState } from 'react';
 
 function App() {
-  const[characters] = useState([{name: 'Crown Prince', picture: cat}, {name: 'Ao Bai', picture: dog}, {name: 'Qing Yan', picture: bird}, {name: 'Lei Luo', picture: tiger}])
+  const[characters] = useState([{name: 'Crown Prince', picture: cat}, {name: 'Ao Bai', picture: dog}, {name: 'Qing Yan', picture: bird}, {name: 'Lei Luo', picture: tiger}, {name: 'Tao', picture: bunny}])
   const[randChar, setRandChar] = useState(Math.floor(Math.random() * (3 - 0 + 1)) + 0)
   const [loading,setLoading] = useState(true)
   const[again, setAgain] = useState(1)
