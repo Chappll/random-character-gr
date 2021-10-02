@@ -45,7 +45,7 @@ function App() {
             }
             <img onLoad={handleImageLoaded} style={{zIndex:"-1"}} src={characters[randChar].picture} alt={characters[randChar].name} height={500} width={500}></img>       
             <div>
-              <button className="button" onClick={()=> setRandChar(randomInteger(0,3))}> Randomise Character</button>
+              <button className="button" onClick={()=> setRandChar(randomInteger(0,4))}> Randomise Character</button>
             </div>            
         </div>
       </div>
