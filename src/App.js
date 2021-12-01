@@ -6,12 +6,13 @@ import cat from './heropics/CatGunfire.PNG'
 import bird from './heropics/BirdGunfire.PNG'
 import tiger from './heropics/TigerGunfire.PNG'
 import bunny from './heropics/TaoGunfire.PNG'
+import turtle from './heropics/TurtleGunfire.PNG'
 import gunfire from './heropics/GunfireLogo.PNG'
 //import Loader from "react-loader-spinner";
 import React, { useState } from 'react';
 
 function App() {
-  const[characters] = useState([{name: 'Crown Prince', picture: cat}, {name: 'Ao Bai', picture: dog}, {name: 'Qing Yan', picture: bird}, {name: 'Lei Luo', picture: tiger}, {name: 'Tao', picture: bunny}])
+  const[characters] = useState([{name: 'Crown Prince', picture: cat}, {name: 'Ao Bai', picture: dog}, {name: 'Qing Yan', picture: bird}, {name: 'Lei Luo', picture: tiger}, {name: 'Tao', picture: bunny}, {name: 'Qian Sui', picture: turtle}])
   const[randChar, setRandChar] = useState(Math.floor(Math.random() * (3 - 0 + 1)) + 0)
   const [loading,setLoading] = useState(true)
   const[again, setAgain] = useState(1)
@@ -45,7 +46,7 @@ function App() {
             }
             <img onLoad={handleImageLoaded} style={{zIndex:"-1"}} src={characters[randChar].picture} alt={characters[randChar].name} height={500} width={500}></img>       
             <div>
-              <button className="button" onClick={()=> setRandChar(randomInteger(0,4))}> Randomise Character</button>
+              <button className="button" onClick={()=> setRandChar(randomInteger(0,5))}> Randomise Character</button>
             </div>            
         </div>
       </div>
